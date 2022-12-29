@@ -1,0 +1,19 @@
+{
+  "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript"
+  ],
+  "cSpell.words": [
+    "nextup",
+    "tvod",
+    "viewlift",
+    "VIEWLLIFT"
+  ]
+}

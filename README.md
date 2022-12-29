@@ -1,2 +1,1 @@
-# calcs-nc
- Calculations cron-job for NextUp Comedy 
+# Nextup-comedy-calc
