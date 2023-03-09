@@ -1,4 +1,4 @@
-import { IReport } from 'db-models-nc';
+import { IReport } from 'nc-db-new';
 
 interface IDatabase {
   DATABASE_URL: string;
@@ -12,7 +12,7 @@ interface IEmail {
 interface IViewlift {
   email: string;
   password: string;
-  viewliftEndpoint: string;
+  uScreenEndpoint: string;
   limit: number;
   fetchMaxCount: number;
 }
@@ -25,7 +25,7 @@ interface IListUserWatched {
   limit: number;
   offset?: number;
   Authorization: string;
-  viewliftEndpoint: string;
+  uScreenEndpoint: string;
 }
 
 interface IBasicContent {
@@ -138,7 +138,7 @@ interface IPurchase {
 
 interface IListSlicePurchases {
   Authorization: string;
-  viewliftEndpoint: string;
+  uScreenEndpoint: string;
   first: number;
   type: string;
   fromDate: string;

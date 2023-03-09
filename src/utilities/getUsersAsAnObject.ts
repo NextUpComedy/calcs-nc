@@ -1,4 +1,4 @@
-import { ICustomUser, User } from 'db-models-nc';
+import { ICustomUser, User } from 'nc-db-new';
 
 const getUsersAsAnObject = async ():Promise<Record<number, ICustomUser>> => {
   const usersObj:Record<number, ICustomUser> = {};

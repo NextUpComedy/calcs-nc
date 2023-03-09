@@ -1,4 +1,4 @@
-import { sequelize, migration as umzug } from 'db-models-nc';
+import { sequelize, migration as umzug } from 'nc-db-new';
 
 (async (): Promise<void> => {
   await umzug.up();

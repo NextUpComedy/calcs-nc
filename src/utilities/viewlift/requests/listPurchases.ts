@@ -11,7 +11,7 @@ const getAllPurchases = async (
 
   const getSlicePurchases = async ({
     Authorization,
-    viewliftEndpoint,
+    uScreenEndpoint,
     first = 1000,
     type = 'BUY',
     fromDate,
@@ -23,7 +23,7 @@ const getAllPurchases = async (
           data: { listPurchases: { pageInfo: { hasNextPage, endCursor }, purchases } },
         },
       } = await axios.post(
-        viewliftEndpoint,
+        uScreenEndpoint,
         {
           query: listPurchasesQuery,
           variables: {
@@ -45,7 +45,7 @@ const getAllPurchases = async (
       if (hasNextPage) {
         await getSlicePurchases({
           Authorization,
-          viewliftEndpoint,
+          uScreenEndpoint,
           first,
           type,
           fromDate,

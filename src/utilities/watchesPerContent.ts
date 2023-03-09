@@ -1,4 +1,4 @@
-import { IContent } from 'db-models-nc';
+import { IContent } from 'nc-db-new';
 import { WPCOutputDTO, ContentDTO } from '../dto/content.dto';
 import {
   IAccumulatedWatchesDurationPerContent, IWatchedStream, IPayment, ISysContent,

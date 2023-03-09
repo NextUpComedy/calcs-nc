@@ -6,7 +6,7 @@ import {
   Content,
   User,
   ContentReport,
-} from 'db-models-nc';
+} from 'nc-db-new';
 import Big from 'big.js';
 import {
   min, max, differenceInDays, addYears,
@@ -38,7 +38,7 @@ import {
       maxCount,
       nextUpToOwedSplitPercentage,
       password,
-      viewliftEndpoint,
+      uScreenEndpoint,
       stripeKey,
     } = await getDashboardSettings();
 
@@ -79,7 +79,7 @@ import {
     const { Authorization } = await viewliftLogin({
       email,
       password,
-      viewliftEndpoint,
+      uScreenEndpoint,
     });
 
     logger.info('Logged in to ViewLift API');
@@ -87,7 +87,7 @@ import {
 
     const { watchedStreams } = await listUserWatched({
       Authorization,
-      viewliftEndpoint,
+      uScreenEndpoint,
       maxCount,
       limit,
       watchTimeFrom,
@@ -95,7 +95,7 @@ import {
     });
     const { paymentsList } = await getAllPayments({
       Authorization,
-      viewliftEndpoint,
+      uScreenEndpoint,
       after: watchTimeFrom,
       limit,
     });

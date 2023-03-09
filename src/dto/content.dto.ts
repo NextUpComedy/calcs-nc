@@ -1,4 +1,4 @@
-import { IContent } from 'db-models-nc';
+import { IContent } from 'nc-db-new';
 
 import {
   ISysContent, IWatchedStream, IPayment,

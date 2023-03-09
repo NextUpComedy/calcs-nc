@@ -13,7 +13,7 @@ const getAllWatches = async (
   const listUserWatched = async (
     {
       Authorization,
-      viewliftEndpoint,
+      uScreenEndpoint,
       offset = 0,
       limit,
       watchTimeFrom,
@@ -22,7 +22,7 @@ const getAllWatches = async (
   ): Promise<IListUserWatchedReturn> => {
     try {
       const { data: { data: { listUserWatched: { totalCount, watchedStreams } } } } = await axios
-        .post(viewliftEndpoint, {
+        .post(uScreenEndpoint, {
           query: listUserWatchedQuery,
           variables: {
             watchTimeFrom,
@@ -49,7 +49,7 @@ const getAllWatches = async (
           limit,
           offset: offset + limit,
           Authorization,
-          viewliftEndpoint,
+          uScreenEndpoint,
         });
       } else {
         logger.warn(`  - Fetched ${totalCount} watch data from ${totalCount} total watches`);
@@ -63,7 +63,7 @@ const getAllWatches = async (
             counter,
             maxCount,
             Authorization,
-            viewliftEndpoint,
+            uScreenEndpoint,
             limit,
             offset: 0,
             watchTimeFrom,

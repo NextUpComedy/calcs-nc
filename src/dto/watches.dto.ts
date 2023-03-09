@@ -1,6 +1,6 @@
 export interface ListUserWatchedDTO {
   Authorization: string,
-  viewliftEndpoint: string,
+  uScreenEndpoint: string,
   maxCount: number,
   counter?: number,
   offset?: number,

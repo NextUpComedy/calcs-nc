@@ -11,14 +11,14 @@ const getAllPayments = async (
 
   const listOffsetPayments = async ({
     Authorization,
-    viewliftEndpoint,
+    uScreenEndpoint,
     offset = 0,
     limit,
     after,
   }: IListOffsetPayments): Promise<{ paymentsList: IPayment[] }> => {
     try {
       const { data: { data: { listPayments: { billingHistory } } } } = await axios
-        .post(viewliftEndpoint, {
+        .post(uScreenEndpoint, {
           query: listPaymentsQuery,
           variables: {
             after,
@@ -36,7 +36,7 @@ const getAllPayments = async (
       if (billingHistory.length === limit) {
         await listOffsetPayments({
           Authorization,
-          viewliftEndpoint,
+          uScreenEndpoint,
           offset: offset + limit,
           limit,
           after,

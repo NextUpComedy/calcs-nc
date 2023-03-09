@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 import { addMonths, subMonths } from 'date-fns';
-import { IReport } from 'db-models-nc';
+import { IReport } from 'nc-db-new';
 import constants from '../constants';
 
 const getMayAffectReportRevenueCharges = async (

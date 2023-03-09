@@ -1,6 +1,6 @@
 export interface PurchasesDTO {
   Authorization: string,
-  viewliftEndpoint: string,
+  uScreenEndpoint: string,
   first: number,
   type: string,
   fromDate: string,
